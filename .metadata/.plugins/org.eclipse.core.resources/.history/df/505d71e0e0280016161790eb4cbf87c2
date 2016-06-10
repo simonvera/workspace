@@ -1,0 +1,26 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class Ejemplo {
+
+	public static void main(String[] args) {
+		Map<String, Integer>mapa=new HashMap<String,Integer>();
+		String texto="buenos dias muchacho buenos";
+		String[] palabra=texto.split(" ");
+		for(int i=0;i<palabra.length; i++){
+			if(mapa.containsKey(palabra[i])){
+				mapa.put(palabra[i], mapa.get(palabra[i])+1);
+			}else{
+				mapa.put(palabra[i], 1);
+			}
+		}
+		Iterator<Entry<String, Integer>>it =mapa.entrySet().iterator();
+		while(it.hasNext()){
+			Entry<String, Integer>e=it.next();
+			System.out.println(e.getKey()+" "+e.getValue());
+		}
+	}
+
+}

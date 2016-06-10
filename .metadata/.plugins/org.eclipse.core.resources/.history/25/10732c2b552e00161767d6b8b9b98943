@@ -1,0 +1,5 @@
+package cl.curso.java.abstract_factory;
+
+public abstract class AbstractWidgetFactory {
+	public abstract Window createWindow();
+}

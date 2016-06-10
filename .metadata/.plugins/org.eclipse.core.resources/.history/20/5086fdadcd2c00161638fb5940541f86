@@ -1,0 +1,11 @@
+package cl.curso.java.conexion;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Conexion con= Conexion.getInstancia();
+		Conexion con2=Conexion.getInstancia();
+	}
+
+}
